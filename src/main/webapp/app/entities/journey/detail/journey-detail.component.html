@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="journey">
+      <h2 data-cy="journeyDetailsHeading"><span jhiTranslate="truckBossApp.journey.detail.title">Journey</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ journey.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="truckBossApp.journey.startTime">Start Time</span></dt>
+        <dd>
+          <span>{{ journey.startTime | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="truckBossApp.journey.endTime">End Time</span></dt>
+        <dd>
+          <span>{{ journey.endTime | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="truckBossApp.journey.status">Status</span></dt>
+        <dd>
+          <span>{{ journey.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="truckBossApp.journey.schedule">Schedule</span></dt>
+        <dd>
+          <div *ngIf="journey.schedule">
+            <a [routerLink]="['/schedule', journey.schedule?.id, 'view']">{{ journey.schedule?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/journey', journey.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

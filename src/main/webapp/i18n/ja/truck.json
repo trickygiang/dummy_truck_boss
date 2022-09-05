@@ -1,0 +1,27 @@
+{
+  "truckBossApp": {
+    "truck": {
+      "home": {
+        "title": "Trucks",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Truck を追加",
+        "createOrEditLabel": "Truckを追加または編集",
+        "notFound": "No Trucks found"
+      },
+      "created": "A new Truck is created with identifier {{ param }}",
+      "updated": "A Truck is updated with identifier {{ param }}",
+      "deleted": "A Truck is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Truck {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Truck"
+      },
+      "id": "ID",
+      "code": "Code",
+      "model": "Model",
+      "registrationDate": "Registration Date",
+      "monthDue": "Month Due"
+    }
+  }
+}

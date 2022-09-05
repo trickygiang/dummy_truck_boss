@@ -74,18 +74,4 @@ public class TruckBossKafkaResource {
         return emitter;
     }
 
-    private static class PublishResult {
-
-        public final String topic;
-        public final int partition;
-        public final long offset;
-        public final Instant timestamp;
-
-        private PublishResult(String topic, int partition, long offset, Instant timestamp) {
-            this.topic = topic;
-            this.partition = partition;
-            this.offset = offset;
-            this.timestamp = timestamp;
-        }
-    }
 }

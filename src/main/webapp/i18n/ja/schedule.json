@@ -1,0 +1,26 @@
+{
+  "truckBossApp": {
+    "schedule": {
+      "home": {
+        "title": "Schedules",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Schedule を追加",
+        "createOrEditLabel": "Scheduleを追加または編集",
+        "notFound": "No Schedules found"
+      },
+      "created": "A new Schedule is created with identifier {{ param }}",
+      "updated": "A Schedule is updated with identifier {{ param }}",
+      "deleted": "A Schedule is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Schedule {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Schedule"
+      },
+      "id": "ID",
+      "status": "Status",
+      "truck": "Truck",
+      "plan": "Plan"
+    }
+  }
+}

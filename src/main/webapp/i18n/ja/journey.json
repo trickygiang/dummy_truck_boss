@@ -1,0 +1,27 @@
+{
+  "truckBossApp": {
+    "journey": {
+      "home": {
+        "title": "Journeys",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Journey を追加",
+        "createOrEditLabel": "Journeyを追加または編集",
+        "notFound": "No Journeys found"
+      },
+      "created": "A new Journey is created with identifier {{ param }}",
+      "updated": "A Journey is updated with identifier {{ param }}",
+      "deleted": "A Journey is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Journey {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Journey"
+      },
+      "id": "ID",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "status": "Status",
+      "schedule": "Schedule"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-truck-heading" data-cy="TruckCreateUpdateHeading" jhiTranslate="truckBossApp.truck.home.createOrEditLabel">
+        Create or edit a Truck
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="truckBossApp.truck.code" for="field_code">Code</label>
+          <input type="text" class="form-control" name="code" id="field_code" data-cy="code" formControlName="code" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="truckBossApp.truck.model" for="field_model">Model</label>
+          <input type="text" class="form-control" name="model" id="field_model" data-cy="model" formControlName="model" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="truckBossApp.truck.registrationDate" for="field_registrationDate"
+            >Registration Date</label
+          >
+          <div class="input-group">
+            <input
+              id="field_registrationDate"
+              data-cy="registrationDate"
+              type="text"
+              class="form-control"
+              name="registrationDate"
+              ngbDatepicker
+              #registrationDateDp="ngbDatepicker"
+              formControlName="registrationDate"
+            />
+            <button type="button" class="btn btn-secondary" (click)="registrationDateDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="truckBossApp.truck.monthDue" for="field_monthDue">Month Due</label>
+          <input type="number" class="form-control" name="monthDue" id="field_monthDue" data-cy="monthDue" formControlName="monthDue" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

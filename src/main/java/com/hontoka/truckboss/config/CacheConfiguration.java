@@ -48,6 +48,10 @@ public class CacheConfiguration {
             createCache(cm, com.hontoka.truckboss.domain.User.class.getName());
             createCache(cm, com.hontoka.truckboss.domain.Authority.class.getName());
             createCache(cm, com.hontoka.truckboss.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.hontoka.truckboss.domain.Truck.class.getName());
+            createCache(cm, com.hontoka.truckboss.domain.Plan.class.getName());
+            createCache(cm, com.hontoka.truckboss.domain.Schedule.class.getName());
+            createCache(cm, com.hontoka.truckboss.domain.Journey.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

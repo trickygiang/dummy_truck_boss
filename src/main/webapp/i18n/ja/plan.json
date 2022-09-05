@@ -1,0 +1,27 @@
+{
+  "truckBossApp": {
+    "plan": {
+      "home": {
+        "title": "Plans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Plan を追加",
+        "createOrEditLabel": "Planを追加または編集",
+        "notFound": "No Plans found"
+      },
+      "created": "A new Plan is created with identifier {{ param }}",
+      "updated": "A Plan is updated with identifier {{ param }}",
+      "deleted": "A Plan is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Plan {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Plan"
+      },
+      "id": "ID",
+      "startLat": "Start Lat",
+      "startLong": "Start Long",
+      "endLat": "End Lat",
+      "endLong": "End Long"
+    }
+  }
+}
